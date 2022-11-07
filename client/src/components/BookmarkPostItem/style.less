@@ -1,0 +1,35 @@
+.item {
+  display: grid;
+  column-gap: 5px;
+  padding: 10px 15px;
+  height: 100px;
+  grid-template-columns: 50px 1fr 80px;
+  .avatar {
+  }
+  .content_container {
+    min-width: 0;
+    display: grid;
+    row-gap: 5px;
+    grid-template-rows: 20px 1fr;
+    .info {
+      .name {
+        margin-right: 10px;
+      }
+      .time {
+        font-size: 12px;
+      }
+    }
+    .content {
+      word-break: break-word;
+      text-overflow: ellipsis;
+    }
+  }
+  .picture {
+    img {
+      height: 100px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}

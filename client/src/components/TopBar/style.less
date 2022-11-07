@@ -1,0 +1,55 @@
+.top_bar {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  .finding {
+    display: grid;
+    row-gap: 10px;
+    .searching {
+
+    }
+    .details {
+      display: flex;
+      position: relative;
+      svg {
+        cursor: pointer;
+        margin-right: 5px;
+        width: 18px;
+        height: 18px;
+      }
+      .back{
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  .user {
+    display: flex;
+    .info{
+      margin-right: 10px;
+      text-align: right;
+      .name{
+        font-size: 28px;
+      }
+      .login{
+        font-size: 12px;
+        cursor: pointer;
+        span{
+          background-color: #7CB3EB;
+          border-radius: 25px;
+          padding: 1px 10px;
+        }
+      }
+      .logout{
+        font-size: 12px;
+        span{
+          background-color: lightgray;
+          border-radius: 25px;
+          padding: 1px 10px;
+        }
+      }
+    }
+  }
+}

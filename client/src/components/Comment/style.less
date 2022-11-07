@@ -1,0 +1,51 @@
+.comment {
+  .item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 15px;
+    .left {
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+      }
+    }
+    .right {
+      .name {
+        margin-bottom: 5px;
+        span {
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+      .detail {
+        .reply_to {
+          .reply_to_user {
+            cursor: pointer;
+          }
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+      .bottom {
+        display: flex;
+        justify-content: flex-end;
+        .reply {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+          }
+        }
+        .time {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

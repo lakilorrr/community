@@ -1,0 +1,83 @@
+.personal_card {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  height: 400px;
+  width: 200px;
+  position: relative;
+  .background {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    .blue_star {
+      position: absolute;
+      rotate: -4deg;
+      width: 350px;
+      right: 0;
+      top: 0;
+      transform: translate(58%, -25%);
+    }
+    .yellow_star {
+      position: absolute;
+      width: 54px;
+      bottom: 20px;
+      left: 10px;
+    }
+  }
+  .card {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    padding: 20px 10px;
+    display: grid;
+    row-gap: 10px;
+    height: 300px;
+    .info {
+
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .time {
+        font-size: 14px;
+      }
+    }
+    .content_container {
+      font-size: 18px;
+      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 5px;
+      padding: 5px 10px;
+      .left_quote {
+        display: flex;
+        align-items: center;
+        .topic {
+          font-weight: 500;
+          font-size: 14px;
+          margin-left: 5px;
+          color: lightslategray;
+        }
+      }
+      .content {
+        overflow-y: auto;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        text-overflow: ellipsis;
+      }
+      .right_quote {
+        text-align: right;
+      }
+    }
+    .like_info {
+      .like_avatars {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .like_numbers {
+        text-align: right;
+        font-size: 12px;
+      }
+    }
+  }
+}

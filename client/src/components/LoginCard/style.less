@@ -1,0 +1,118 @@
+.flex_column() {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar_size(@size: 50px) {
+    height: @size;
+    width: @size;
+    border-radius: 100%;
+}
+
+.login_card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 20px 25px 45px 25px;
+    .flex_column();
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+
+    .info {
+        .flex_column();
+        margin-bottom: 10px;
+        font-size: 36px;
+
+        .role {}
+    }
+
+    form {
+        .flex_column();
+        justify-content: space-between;
+        flex: 1;
+
+        .input {
+            .flex_column();
+            justify-content: space-between;
+
+            .avatar {
+                position: absolute;
+                top: 40px;
+                right: 50px;
+
+                .cover {
+                    display: none;
+                }
+
+                &:hover {
+                    .cover {
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .avatar_size(80px);
+                        background-color: rgba(0, 0, 0, 0.225);
+
+                        svg {
+                            width: 50px;
+                            height: 50px;
+                            color: #f2f2f2;
+                        }
+                    }
+                }
+
+                .avatar_input {
+                    position: absolute;
+                    top: 0;
+                    cursor: pointer;
+                    opacity: 0;
+                    .avatar_size(80px);
+                }
+            }
+
+            label {
+                margin-bottom: 10px;
+            }
+
+            .name_input,
+            .password_input {
+                height: 32px;
+                margin-bottom: 15px;
+                border-style: none;
+                background-color: #f2f2f2;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .submit {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+
+        button {
+            cursor: pointer;
+            border-radius: 5px;
+            height: 32px;
+            font-size: 16px;
+            border-style: none;
+            background-color: #f2f2f2;
+
+            &:hover {
+                background-color: #87b3e6;
+            }
+        }
+    }
+}

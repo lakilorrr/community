@@ -1,0 +1,23 @@
+.background{
+  background-image: url('@/assets/images/background.jpg');
+  background-size: 120%;
+  height: 100vh;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+.layout {
+  margin: 0 96px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 20px;
+  height: 100vh;
+  .left{
+    display: grid;
+    grid-template-rows: 80px auto;
+    row-gap: 20px;
+    overflow: hidden;
+  }
+  .right{
+  }
+}
